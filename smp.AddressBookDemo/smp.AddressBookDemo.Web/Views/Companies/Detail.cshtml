@@ -1,0 +1,133 @@
+﻿@model smp.AddressBookDemo.Models.View.CompanyView
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="companyContainer">
+    <div>
+        <legend id="detailsTitle" class="collapsibleLegend">@Model.Name <i class="icon-chevron-down hide"></i></legend>
+        <div>
+            <div class="form-actions">
+                <button class="btn btn-success" type="button" data-bind="visible: DisplayCompany, click: EditCompany">Edit</button>
+                <button class="btn btn-danger" type="button" data-bind="visible: EditingCompany, click: CancelEditCompany">Cancel</button>
+                <button class="btn btn-success" type="button" data-bind="visible: EditingCompany, click: SaveCompany">Save Changes</button>
+                <span id="SavedDetails" class="text-success hide">Saved</span>
+            </div>
+            <div class="form-horizontal span5">
+                <div class="control-group">
+                    <label class="control-label" for="Name">
+                        Name</label>
+                    <div class="controls">
+                        <input  type="text" data-bind="value: Name, visible: EditingCompany" />
+                        <span data-bind="text: Name, visible: DisplayCompany"></span>
+                    </div>
+                </div>
+        
+                <div class="control-group">
+                    <label class="control-label" for="RegistrationNumber">
+                        Registration Number</label>
+                    <div class="controls">
+                        <input  type="text" data-bind="value: RegistrationNumber, visible: EditingCompany" />
+                        <span data-bind="text: RegistrationNumber, visible: DisplayCompany"></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Telephone">
+                        Telephone</label>
+                    <div class="controls">
+                        <input  type="text" data-bind="value: Telephone, visible: EditingCompany" />
+                        <span data-bind="text: Telephone, visible: DisplayCompany"></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Name">
+                        Name</label>
+                    <div class="controls">
+                        <input  type="text" data-bind="value: Email, visible: EditingCompany" />
+                        <span data-bind="text: Email, visible: DisplayCompany"></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="WebSite">
+                        WebSite</label>
+                    <div class="controls">
+                        <input  type="text" data-bind="value: WebSite, visible: EditingCompany" />
+                        <span data-bind="text: WebSite, visible: DisplayCompany"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-horizontal span5">
+                <div class="control-group">
+                    <label class="control-label" for="PostCode">
+                        PostCode</label>
+                    <div class="controls">
+                        <input  type="text" data-bind="value: PostCode, visible: EditingCompany" />
+                        <button class="btn btn-info" type="button" data-bind="click: SearchPostCode, visible: EditingCompany">Search</button>
+                        <span data-bind="text: PostCode, visible: DisplayCompany"></span>
+                    </div>
+                </div>
+        
+                <div class="control-group">
+                    <label class="control-label" for="AddressLine1">
+                        Address Line 1</label>
+                    <div class="controls">
+                        <input  type="text" data-bind="value: AddressLine1, visible: EditingCompany" />
+                        <span data-bind="text: AddressLine1, visible: DisplayCompany"></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="AddressLine2">
+                        Address Line 2</label>
+                    <div class="controls">
+                        <input  type="text" data-bind="value: AddressLine2, visible: EditingCompany" />
+                        <span data-bind="text: AddressLine2, visible: DisplayCompany"></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Town">
+                        Town</label>
+                    <div class="controls">
+                        <input  type="text" data-bind="value: Town, visible: EditingCompany" />
+                        <span data-bind="text: Town, visible: DisplayCompany"></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="County">
+                        County</label>
+                    <div class="controls">
+                        <input  type="text" data-bind="value: County, visible: EditingCompany" />
+                        <span data-bind="text: County, visible: DisplayCompany"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <legend class="collapsibleLegend">Contacts <i class="icon-chevron-down hide"></i></legend>
+        <div>
+            <table class="table table-striped table-bordered table-hover" data-bind="foreach: Contacts">
+                <tr>
+                    <td>
+                        <p>
+                            <strong>Name : </strong>
+                            <span data-bind="text: Title"> </span><span data-bind="text: FirstName"> </span><span data-bind="text: LastName"> </span> (<span data-bind="text: CompanyPosition"></span>)
+                        </p>
+                        <p>
+                            <strong>Contact : </strong>
+                            <span data-bind="text: PhoneNumber"></span> - <span data-bind="text: Email"></span>
+                        </p>
+                        <div class="pull-right">
+                            <button class="btn btn-success" type="button">Edit</button>
+                            <button class="btn btn-danger" type="button">Remove</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    app.company.init(@Html.Raw(Json.Encode(Model)));
+</script>

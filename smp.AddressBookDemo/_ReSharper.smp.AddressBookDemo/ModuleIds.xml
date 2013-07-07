@@ -1,0 +1,7 @@
+<Modules>
+  <Module PersistentId="1B0BD1A7-FA7F-457C-AA15-043FE94EE1B4" ModuleId="smp.AddressBookDemo.Web" />
+  <Module PersistentId="C0338DE5-9CCD-4FE8-83DC-9F5017596890" ModuleId="smp.AddressBookDemo.Repository" />
+  <Module PersistentId="92853794-1334-4883-9E94-B8FF7BFA73BC" ModuleId="smp.AddressBookDemo.Models" />
+  <Module PersistentId="60F7FA89-4E0E-4AEC-8510-F276456DA9B6" ModuleId="smp.AddressBookDemo.Repository.Tests" />
+  <Module PersistentId="9E8E952F-BBE0-47FD-94CE-A8E6800341BC" ModuleId="smp.AddressBookDemo.Web.Tests" />
+</Modules>

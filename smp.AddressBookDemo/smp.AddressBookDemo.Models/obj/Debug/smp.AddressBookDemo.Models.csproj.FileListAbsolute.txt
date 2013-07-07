@@ -1,0 +1,4 @@
+C:\CODE\smp\demoaddressbook\smp.AddressBookDemo\smp.AddressBookDemo.Models\bin\Debug\smp.AddressBookDemo.Models.dll
+C:\CODE\smp\demoaddressbook\smp.AddressBookDemo\smp.AddressBookDemo.Models\bin\Debug\smp.AddressBookDemo.Models.pdb
+C:\CODE\smp\demoaddressbook\smp.AddressBookDemo\smp.AddressBookDemo.Models\obj\Debug\smp.AddressBookDemo.Models.dll
+C:\CODE\smp\demoaddressbook\smp.AddressBookDemo\smp.AddressBookDemo.Models\obj\Debug\smp.AddressBookDemo.Models.pdb
